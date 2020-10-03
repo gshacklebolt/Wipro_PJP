@@ -16,7 +16,9 @@
 			document.getElementById('Demo').innerHTML=Math.round(x);
 		}
 		function random(){
-			document.getElementById('Demo').innerHTML=Math.random();
+			var x=Math.random();
+			x=Math.round(x*10);
+			document.getElementById('Demo').innerHTML=x;
 		}
 	</script>
 </head>
