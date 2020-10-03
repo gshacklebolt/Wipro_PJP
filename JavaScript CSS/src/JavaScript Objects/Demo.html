@@ -15,6 +15,9 @@
 			var x=document.myForm.input.value;
 			document.getElementById('Demo').innerHTML=Math.round(x);
 		}
+		function random(){
+			document.getElementById('Demo').innerHTML=Math.random();
+		}
 	</script>
 </head>
 <body>
@@ -25,6 +28,8 @@
 		<input type="button" name="Submit" value="Math.floor()" onclick="floor();">
 
 		<input type="button" name="Submit" value="Math.round()" onclick="round();">
+
+		<input type="button" name="Submit" value="Math.random()" onclick="random();">
 	</form>
 	<div id="Demo"></div>
 </body>
