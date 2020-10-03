@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<script type="text/javascript">
+		function floor(){
+			var x=document.myForm.input.value;
+			document.getElementById('Demo').innerHTML=Math.floor(x);
+		}
+		function ceil(){
+			var x=document.myForm.input.value;
+			document.getElementById('Demo').innerHTML=Math.ceil(x);
+		}
+		function round(){
+			var x=document.myForm.input.value;
+			document.getElementById('Demo').innerHTML=Math.round(x);
+		}
+	</script>
+</head>
+<body>
+	<form name="myForm">
+		<input type="text" name="input" /><br />
+		<input type="button" name="Submit" value="Math.ceil()" onclick="ceil();">
+
+		<input type="button" name="Submit" value="Math.floor()" onclick="floor();">
+
+		<input type="button" name="Submit" value="Math.round()" onclick="round();">
+	</form>
+	<div id="Demo"></div>
+</body>
+</html>

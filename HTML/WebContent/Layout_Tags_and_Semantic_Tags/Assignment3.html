@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Assignment 3</title>
+<style>
+	.parenthesis_1{
+		list-style: none;
+		counter-reset: myCounter1;
+	}
+	.parenthesis_1 .list_1{
+		counter-increment: myCounter1;
+	}
+	.parenthesis_1 .list_1::before{
+		content: counter(myCounter1) ") ";
+	}
+	
+	.parenthesis_a{
+		list-style: none;
+		counter-reset: myCounter2;
+	}
+	.parenthesis_a .list_a{
+		counter-increment: myCounter2;
+	}
+	.parenthesis_a .list_a::before{
+		content: counter(myCounter2,lower-latin) ") ";
+	}
+</style>
+</head>
+
+<body>
+	<h3>List 1</h3>
+	<ol class="parenthesis_1">
+		<li class="list_1">One</li>
+		<ol type="a">
+			<li>Uno</li>
+			<li>Hanna</li>
+		</ol>
+		<li class="list_1">Two</li>
+		<ol type="a">
+			<li>Dos</li>
+			<li>Dool</li>
+		</ol>
+		<li class="list_1">Three</li>
+		<ol type="a">
+			<li>Tres</li>
+			<li>Set</li>
+		</ol>
+	</ol>
+	
+	<h3>List 2</h3>
+	<ul type="disc">
+		<li>Chevy</li>
+		<ul type="circle">
+			<li>Cavilier</li>
+			<li>Malibu</li>
+		</ul>
+		<li>Ford</li>
+		<ul type="circle">
+			<li>Escort</li>
+			<li>F100</li>
+		</ul>
+		<li>Mazda</li>
+		<ul type="circle">
+			<li>626</li>
+		</ul>
+	</ul>
+	
+	<h3>List 3</h3>
+	<ol type="A">
+		<li>Fruits</li>
+		<ol type="i">
+			<li>Apples,Oranges,Pears,Banana</li>
+		</ol>
+		<li>Vegetables</li>
+		<ol type="i">
+			<li>Corn</li>
+			<ol class="parenthesis_a">
+				<li class="list_a">On the cob</li>
+				<li class="list_a">Cream</li>
+			</ol>
+			<li>Carrots</li>
+			<li>Green Beans</li>
+		</ol>
+	</ol>
+</body>
+</html>

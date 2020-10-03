@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 3</title>
+	<script language="JavaScript" type="text/javascript">
+		function palindromeCheck(str){
+			var retVal="No";
+			if(str==str.split("").reverse().join("")){
+				retVal="Yes";
+			}
+			document.getElementById("Status").innerHTML=retVal;
+		}
+	</script>
+</head>
+<body>
+	<h3>Assignment 3: Check for palindrome</h3>
+	<form name="myform">
+		<table>
+			<tr>
+				<td>
+					<label for="txt">Enter a string: </label>
+				</td>
+				<td>
+					<input type="text" name="txt" oninput="palindromeCheck(this.value);" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="Status">Entered string is a palindrome?</label>
+				</td>
+				<td>
+					<div id="Status"></div>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

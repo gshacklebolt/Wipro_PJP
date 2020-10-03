@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 2</title>
+	<script language="JavaScript" type="text/javascript">
+		function reverseNum(){
+			var num=document.myform.number.value;
+			var newnum=0,temp;
+			while(num>0){
+				temp=num%10;
+				newnum=(newnum*10)+temp;
+				num=parseInt(num/10);
+			}
+			document.getElementById("reversed").innerHTML=newnum;
+		}
+	</script>
+</head>
+<body>
+	<h3>Assignment 2: Reverse number</h3>
+
+	<form name="myform" onsubmit="reverseNum(); return false;">
+		<table>
+			<tr>
+				<td>
+					<label for="number">Enter a number: </label>
+				</td>
+				<td>
+					<input type="number" name="number" />
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="button" value="Reverse number" onclick="reverseNum();" />
+				</td>
+				<td>
+					<div id="reversed"></div>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

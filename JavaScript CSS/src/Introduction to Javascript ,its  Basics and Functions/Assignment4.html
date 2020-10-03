@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 4</title>
+	<script language="JavaScript" type="text/javascript">
+		
+		function capital(str){
+			document.getElementById("capital").innerHTML=str;
+			document.getElementById("capital").style.textTransform="capitalize";
+		}
+	</script>
+</head>
+<body>
+	<h3>Assignment 4: Convert first letter of each word to capital</h3>
+	<table>
+		<tr>
+			<form name="myform">
+				<td>
+					<label for="txt">Enter a string: </label>
+				</td>
+				<td>
+					<input type="text" name="txt" id="txt" oninput="capital(this.value);" />
+				</td>
+			</form>
+		</tr>
+		<tr>
+			<td>
+				<label for="capital">Capitalized string: </label>
+			</td>
+			<td>
+				<div id="capital"></div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
